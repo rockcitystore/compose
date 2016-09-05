@@ -44,7 +44,8 @@ function compose (middleware) {
           return dispatch(i + 1)
         }))
       } catch (err) {
-        return Promise.reject(err)
+        throw new Error(err);
+        // return Promise.reject(err)
       }
     }
   }
